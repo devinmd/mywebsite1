@@ -1,0 +1,179 @@
+:root {
+  --dark: #121319af;
+  --bg2: #191a21;
+  --bg3: #1D1E26;
+  --bg4: #22232B;
+  --bg5: #272830;
+  --green: #009966;
+  --yellow: #f1b441;
+  --blue: #578ed1;
+  --red: #c6354d;
+  --body-bg: white;
+  --shadow: #0000004a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: Helvetica;
+  user-select: none;
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+#app {
+  background-color: var(--body-bg);
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+#topnav {
+  background-color: var(--dark);
+  position: fixed;
+  display: inline;
+  top: 0;
+  width: 100%;
+  color: #b1b1b1;
+  height: 16px;
+}
+
+#topnav button,
+#topnav p {
+  display: inline;
+}
+
+#content {
+  margin-top: 16px;
+}
+
+#bottomnav {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--dark);
+  backdrop-filter: blur(24px);
+  height: 50px;
+  width: calc(100% - 16px);
+  border-radius: 12px;
+  margin: 8px;
+}
+
+#bottomnav div button {
+  background-color: var(--dark);
+  width: 42px;
+  height: 42px;
+  background-color: var(--green);
+  background-size: contain;
+  background-position: center;
+  border-radius: 8px;
+  transition: 200ms;
+}
+
+#bottomnav div {
+  padding: 4px 4px 4px 4px;
+  border-radius: 6px;
+}
+
+
+#bottomnav div.active {
+  background-color: var(--bg5);
+}
+
+#bottomnav div button:hover {
+  transform: translateY(-2px);
+}
+
+.frameBox {
+  width: 400px;
+  height: 220px;
+  border-radius: 8px;
+  position: absolute;
+  box-shadow: 0 1px 2px 1px var(--shadow);
+}
+
+.frameBox div {
+  background-color: var(--dark);
+  height: 20px;
+  border-radius: 8px 8px 0 0;
+  backdrop-filter: blur(24px);
+  padding: 0 8px 0 8px;
+}
+
+.frameBox.focus {
+  box-shadow: 0 1px 3px 2px var(--shadow);
+
+}
+
+.frameBox div p {
+  display: inline-block;
+  color: #b1b1b1;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.frame {
+  width: 400px;
+  height: 200px;
+  border-radius: 0 0 8px 8px;
+}
+
+.frameBox div button {
+  transition: all 200ms, border-radius 300ms;
+  background-color: transparent;
+  float: right;
+  border-radius: 50%;
+  height: 14px;
+  margin: 3px 0 0 2px;
+  background-size: 16px 16px;
+  width: 14px;
+  background-position:center ;
+}
+
+.closeFrameBtn {
+  color: var(--red);
+  background-image: url('assets/close.svg');
+}
+
+.closeFrameBtn:hover {
+  background-color: var(--red);
+  color: var(--dark);
+  background-image: url('assets/close1.svg');
+  border-radius: 20%;
+}
+
+.minimizeFrameBtn {
+  color: var(--yellow);
+  background-image: url('assets/minimize.svg');
+}
+
+.minimizeFrameBtn:hover {
+  background-color: var(--yellow);
+  color: var(--dark);
+  background-image: url('assets/minimize1.svg');
+  border-radius: 20%;
+}
+
+.batteryInfo {
+  float: right;
+  margin: 1px 4px 0 0;
+  font-size: 12px;
+}
+
+#center {
+  width: 75vw;
+  background-color: var(--dark);
+  height: 12vh;
+  margin: auto auto;
+  z-index: 9999;
+  position: absolute;
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  margin: 25% 50%;
+  transform: translateX(-50%) translateY(-50%);
+}

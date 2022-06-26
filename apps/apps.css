@@ -1,0 +1,12 @@
+* {
+  font-family: Helvetica;
+}
+
+button {
+  padding: 2px 12px;
+}
+
+body {
+  background-color: #1f1f1f;
+  color: #cecece;
+}

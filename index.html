@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desktop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <div id="topnav">
+      <button onclick="fullscreen()">Fullscreen</button>
+      <p class="batteryInfo"></p>
+    </div>
+
+    <div id="content">
+      <div style="display: none;" id="center">
+        <p>center menu</p>
+      </div>
+    </div>
+
+    <div id="bottomnav">
+      <div style="position: absolute; left: 1px;" onclick="centerMenu()"><button>x</button></div>
+    </div>
+
+  </div>
+
+  <script src=" ./public/public.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
